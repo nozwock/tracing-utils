@@ -59,6 +59,6 @@ impl io::Write for RotatingFileWriter {
     }
 
     fn flush(&mut self) -> io::Result<()> {
-        Ok(())
+        self.sink.flush()
     }
 }
