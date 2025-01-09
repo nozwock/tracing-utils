@@ -43,7 +43,7 @@ impl RotatingFileWriter {
             }
         }
 
-        let time = chrono::Local::now().format("%Y-%m-%dT%H:%M:%S");
+        let time = chrono::Local::now().format("%Y-%m-%dT%H-%M-%S");
 
         Ok(Self {
             sink: BufWriter::new(fs::File::create(
